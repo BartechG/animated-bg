@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background: #dfdfdf;
+}
+
+.wrapper .box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.box-img {
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+#box1 {
+  animation: animateBox 15s infinite;
+}
+
+#box2 {
+  animation: animateBox2 15s infinite;
+}
+
+@keyframes animateBox {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(150px, 150px) rotate(25deg);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes animateBox2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(150px, -150px) rotate(-25deg);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
